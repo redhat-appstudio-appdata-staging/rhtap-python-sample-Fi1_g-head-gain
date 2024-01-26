@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: rhtap-python-sample-6raa
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: rhtap-python-sample-6raa
+    app.kubernetes.io/part-of: rhtap-python-sample
+  name: rhtap-python-sample-6raatuxc
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: rhtap-python-sample-6raa
+    weight: null
+status: {}
